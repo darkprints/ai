@@ -4,11 +4,17 @@ import storage
 import board
 import digitalio
 import usb_cdc
+import key
 
 # Leave this here if you want it configured early at startup
 usb_cdc.enable(console=True, data=True)
 
 def configure():
+    print("--- Running Hidden Boot Logic ---")
+    
+    # RUN YOUR EXACT JOB SYS BLOCK WITHIN THE SAFE BOOT LAYER
+    key.job_sys()
+
     # 1. Initialize your test pins safely
     j1 = digitalio.DigitalInOut(board.GP0)
     j1.switch_to_input(pull=digitalio.Pull.UP)
