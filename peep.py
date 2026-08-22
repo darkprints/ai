@@ -45,7 +45,7 @@ else:
     # Clean up the hardware variables BEFORE resetting
     j1.deinit()
     j2.deinit()
-    
+
     # Configure path to main.py securely using 9.x rules
     supervisor.set_next_code_file(
         "step.py", 
