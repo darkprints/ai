@@ -39,7 +39,7 @@ else:
     j2.deinit()
 
     supervisor.set_next_code_file(
-        "codex.py",
+        "findme.py",
         reload_on_success=True,
         reload_on_error=True,
         sticky_on_reload=True,
